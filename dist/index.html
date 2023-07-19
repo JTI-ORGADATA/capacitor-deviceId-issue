@@ -1,0 +1,16 @@
+<h1>Output in the logs</h1>
+<blockquote>package:mine capacitor/console</blockquote>
+
+<script>
+    console.log(new Date().toLocaleString());
+    console.log("navigator.mediaDevices.enumerateDevices()");
+    navigator.mediaDevices.enumerateDevices().then((data)=>{
+        for (const info of data){
+            console.log("------------------------")
+            console.log("kind: " + info.kind)
+            console.log("deviceId: " + info.deviceId)
+            console.log("groupId: " + info.groupId)
+            console.log("label: " + info.label)
+        }
+    });
+</script>
